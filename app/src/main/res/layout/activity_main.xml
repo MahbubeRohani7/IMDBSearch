@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context=".feature.Search.ui.SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@android:color/white"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/edtSearchName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/search_edt_shape"
+        android:imeOptions="actionSearch"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:layout_weight=".9"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+    <ImageView
+    android:id="@+id/imgSearch"
+        android:layout_weight=".05"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:padding="12dp"
+    android:src="@drawable/ico_search_gray" />
+
+        <ImageView
+            android:id="@+id/imgBookmarked"
+            android:layout_weight=".05"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/bookmarkimg"
+            android:padding="11dp"
+          />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_edt_shape">
+    <ProgressBar
+        android:layout_marginTop="24dp"
+        android:id="@+id/loading"
+        android:layout_width="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+
+         />
+</RelativeLayout>
+</LinearLayout>

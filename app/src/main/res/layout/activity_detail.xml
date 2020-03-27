@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/movie_backdrop_image"
+        android:scaleType="fitXY"
+/>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_margin="24dp"
+        android:background="@drawable/search_edt_shape"
+        android:layout_height="match_parent">
+
+        <com.pooyeshgaran.imdbsearch.utils.customview.CustomImageView
+            android:id="@+id/movie_poster_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/movie_name_txt"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addBookmark"
+           android:layout_centerHorizontal="true"
+            android:gravity="center"
+
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/movie_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movie_name_txt"
+            android:layout_margin="16dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/movie_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movie_description"
+            android:layout_margin="16dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/movie_rate"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movie_release"
+            android:drawableLeft="@drawable/star"
+            android:layout_margin="16dp" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_favorite_white_border"
+       android:layout_below="@+id/movie_poster_img"
+            android:layout_centerHorizontal="true"
+           />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

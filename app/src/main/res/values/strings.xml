@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">IMDBSearch</string>
+    <string name="search_movie">search</string>
+    <string name="content_description_movie_poster">Movie poster image</string>
+    <string name="content_description_movie_backdrop">backDrop</string>
+</resources>
